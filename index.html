@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Current Local Weather</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta charset="UTF-8">
+
+        <!-- load bootstrap and fontawesome via CDN -->
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <style>
+            html, body, input, select, textarea
+            {
+                font-size: 1.05em !important;
+            }
+        </style>            
+    </head>
+<body>
+
+<section class='container' id='full_doc_container'> 
+  <article class="row">
+    <div class="col-lg-12 col-centered text-center">
+      <h1>Your Local Weather</h1>
+      <div id="temp"></div>
+      <div class="display" id="city"></div>
+      <div id="condition" class="display"></div>
+      <div id="wind" class="display"></div>
+    </div>
+  </article>
+</section>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+        </body>
