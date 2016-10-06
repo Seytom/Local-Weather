@@ -10,11 +10,11 @@
 var city_state = document.getElementById("city");  //use a little javascript; not everything has to be JQuery.
 var myIP=null;
 
-$.get("http://ipinfo.io", function(response) {
+$.get("https://ipinfo.io", function(response) {
   city_state.innerHTML = response.city + ", " + response.region;
   myIP = response.ip;
   //Now the second http request is made
-  $.get("http:/\/api.worldweatheronline.com/free/v2/weather.ashx?key=4e2b71c8cfa4278f7804ac98f8925&q=" + myIP + "&num_of_days=1&tp=3&format=json", function(weatherResponse) {
+  $.get("https:/\/api.worldweatheronline.com/free/v2/weather.ashx?key=4e2b71c8cfa4278f7804ac98f8925&q=" + myIP + "&num_of_days=1&tp=3&format=json", function(weatherResponse) {
     //second success/callback function. Update the website with the current weather data
     $("#temp").append("<img src='" + weatherResponse.data.current_condition[0].weatherIconUrl[0].value + "'>" + " " + weatherResponse.data.current_condition[0].temp_F + " F");
     $("#wind").append(weatherResponse.data.current_condition[0].winddir16Point + " " + weatherResponse.data.current_condition[0].windspeedMiles + " mph");
